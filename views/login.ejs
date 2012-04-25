@@ -1,0 +1,18 @@
+<section class="mainSection">
+    <h1 class="pageTitle">Login</h1>
+  
+    <% if ('undefined' !== typeof errors && errors.length) { %>
+      <ul>
+      <% for (var i = 0; i < errors.length; i++) { %>
+        <li><%= errors[i] %></li>
+      <% }%>
+      </ul>
+    <% } %>
+    <form action="/login" method="post">
+      <label for="<%-everyauth.password.loginFormFieldName%>">Login</label>
+      <input type="text" name="<%-everyauth.password.loginFormFieldName%>" value=""/>
+      <label for="<%-everyauth.password.passwordFormFieldName%>">Password</label>
+      <input type="password" name="<%-everyauth.password.passwordFormFieldName%>"/>
+      <input type="submit" value="Login"/>
+    </form>
+</section>
